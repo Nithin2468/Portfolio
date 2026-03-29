@@ -148,9 +148,8 @@
         margin-bottom: 3.5rem;
         text-align: center;
         position: relative;
-        display: inline-block;
-        left: 50%;
-        transform: translateX(-50%);
+        display: block;
+        width: 100%;
         color: white;
         letter-spacing: 1px;
       }
@@ -364,7 +363,7 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
       }
-      .stat-card {
+      .stat-item {
         background: linear-gradient(
           135deg,
           rgba(20, 28, 47, 0.7),
@@ -378,12 +377,12 @@
         position: relative;
         overflow: hidden;
       }
-      .stat-card:hover {
+      .stat-item:hover {
         transform: translateY(-5px);
         border-color: var(--accent-primary);
         box-shadow: 0 10px 20px rgba(0, 212, 255, 0.1);
       }
-      .stat-card::before {
+      .stat-item::before {
         content: "";
         position: absolute;
         top: 0;
@@ -395,10 +394,11 @@
         transform-origin: left;
         transition: transform var(--transition-normal);
       }
-      .stat-card:hover::before {
+      .stat-item:hover::before {
         transform: scaleX(1);
       }
-      .stat-value {
+      .stat-number {
+        display: block;
         font-size: 1.8rem;
         color: white;
         font-weight: 800;
@@ -406,6 +406,7 @@
         margin-bottom: 0.2rem;
       }
       .stat-label {
+        display: block;
         color: var(--accent-primary);
         font-size: 0.85rem;
         font-weight: 500;
@@ -896,21 +897,21 @@
 
         <!-- 4 Quick Stats -->
         <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-value">3L+</div>
-            <div class="stat-label">Clients Served</div>
+          <div class="stat-item">
+            <span class="stat-number">1 Year</span>
+            <span class="stat-label">FinTech Experience</span>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">80L+</div>
-            <div class="stat-label">Daily Transactions</div>
+          <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Projects Built</span>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">1 Year</div>
-            <div class="stat-label">FinTech Experience</div>
+          <div class="stat-item">
+            <span class="stat-number">7+</span>
+            <span class="stat-label">Technologies</span>
           </div>
-          <div class="stat-card">
-            <div class="stat-value">5</div>
-            <div class="stat-label">Core Projects</div>
+          <div class="stat-item">
+            <span class="stat-number">2</span>
+            <span class="stat-label">Certifications</span>
           </div>
         </div>
       </div>
